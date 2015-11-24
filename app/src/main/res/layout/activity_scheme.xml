@@ -10,4 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ihongqiqu.androidschemedemo.SchemeActivity">
 
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"/>
 </RelativeLayout>
