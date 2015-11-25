@@ -29,6 +29,13 @@ public class SchemeActivity extends AppCompatActivity {
         sb.append("path:");
         sb.append(uri.getPath());
 
+        sb.append("\n");
+        sb.append("name:");
+        sb.append(uri.getQueryParameter("name"));
+        sb.append("\n");
+        sb.append("page:");
+        sb.append(uri.getQueryParameter("page"));
+
         tv_data.setText(sb.toString());
     }
 }
