@@ -17,6 +17,9 @@ public class SchemeActivity extends AppCompatActivity {
 
         Uri uri = getIntent().getData();
         StringBuilder sb = new StringBuilder();
+        sb.append("string:");
+        sb.append(getIntent().getDataString());
+        sb.append("\n");
         sb.append("scheme:");
         sb.append(uri.getScheme());
         sb.append("\n");

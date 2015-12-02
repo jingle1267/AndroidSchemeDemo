@@ -17,18 +17,13 @@
         </activity>
         <activity android:name=".SchemeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="schemedemo" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="http"
-                    android:host="ihongqiqu.com" />
+                <action android:name="android.intent.action.VIEW" /> <!-- 必须有 -->
+                <category android:name="android.intent.category.BROWSABLE" /> <!-- 必须有 -->
+                <category android:name="android.intent.category.DEFAULT" /> <!-- 必须有 -->
+                <data android:scheme="schemedemo"
+                      android:host="ihongqiqu.com"
+                      android:pathPrefix="/test"
+                    />
             </intent-filter>
         </activity>
     </application>
