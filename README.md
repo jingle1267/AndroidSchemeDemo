@@ -18,6 +18,10 @@
  * path：  协议路径	※没有也可以
  * query： 一些参数	※没有也可以
 
+##### 终端未安装APP
+  
+  终端如果已经安装我们的应用，这个时候可以直接唤起原生应用；终端如果没有安装我们的应用，这时我们需要引导用户去安装。
+
 ### APP实现
 
 ##### AndroidManifest中添加配置
@@ -33,14 +37,14 @@
 </activity>
 ```
 
-  data标签中匹配原则如下：
+##### data标签中匹配原则如下：
  * `android:scheme` : 唤起协议
  * `android:host` : 唤起host，只有置顶的host才可被唤起
  * `android:pathPrefix` : 唤起的路径，对路径进一步的过滤
 
-  Activity中接受唤起协议的数据：
+##### Activity中接受唤起协议的数据：
 
-｀｀｀
+```java
 Uri uri = getIntent().getData();
 StringBuilder sb = new StringBuilder();
 // 唤起链接
@@ -54,10 +58,31 @@ sb.append("name : ").append(uri.getQueryParameter("name")).append("\n");
 sb.append("page : ").append(uri.getQueryParameter("page"));
 
 tv_data.setText(sb.toString());
-｀｀｀
+```
 
-  
+### 测试资源
 
-[唤起源码](https://raw.githubusercontent.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) 
-[测试地址](https://rawgit.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) 
-[正式地址](https://cdn.rawgit.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) 
+[唤起源码](https://raw.githubusercontent.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) <br/>
+[测试地址](https://rawgit.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) <br/>
+[正式地址](https://cdn.rawgit.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) <br/>
+
+### 开发者 (Developer)
+
+* [Zhenguo Jin](http://ihongqiqu.com) - <jingle1267@163.com>
+
+
+### License
+
+    Copyright 2014-2015 Zhenguo Jin
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
