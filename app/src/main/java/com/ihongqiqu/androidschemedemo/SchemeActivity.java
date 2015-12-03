@@ -17,27 +17,15 @@ public class SchemeActivity extends AppCompatActivity {
 
         Uri uri = getIntent().getData();
         StringBuilder sb = new StringBuilder();
-        sb.append("string:");
-        sb.append(getIntent().getDataString());
-        sb.append("\n");
-        sb.append("scheme:");
-        sb.append(uri.getScheme());
-        sb.append("\n");
-        sb.append("host:");
-        sb.append(uri.getHost());
-        sb.append("\n");
-        sb.append("port:");
-        sb.append(uri.getPort());
-        sb.append("\n");
-        sb.append("path:");
-        sb.append(uri.getPath());
-
-        sb.append("\n");
-        sb.append("name:");
-        sb.append(uri.getQueryParameter("name"));
-        sb.append("\n");
-        sb.append("page:");
-        sb.append(uri.getQueryParameter("page"));
+        // 唤起链接
+        sb.append("string : ").append(getIntent().getDataString()).append("\n");
+        sb.append("scheme : ").append(uri.getScheme()).append("\n");
+        sb.append("host : ").append(uri.getHost()).append("\n");
+        sb.append("port : ").append(uri.getPort()).append("\n");
+        sb.append("path : ").append(uri.getPath()).append("\n");
+        // 接收唤起的参数
+        sb.append("name : ").append(uri.getQueryParameter("name")).append("\n");
+        sb.append("page : ").append(uri.getQueryParameter("page"));
 
         tv_data.setText(sb.toString());
     }
