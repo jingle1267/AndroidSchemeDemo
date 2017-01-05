@@ -117,6 +117,10 @@ tv_data.setText(sb.toString());
 [测试地址](https://rawgit.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) <br/>
 [正式地址](https://cdn.rawgit.com/jingle1267/AndroidSchemeDemo/master/html/callback.html) <br/>
 
+### 其它
+
+[Android Webview模块](https://github.com/jingle1267/WebActivity)
+
 ### 开发者
 
 * [Zhenguo Jin](http://ihongqiqu.com) - <jingle1267@163.com>
